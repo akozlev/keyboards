@@ -10,13 +10,12 @@
 
 #define SPOT LC(LS(LA(SPACE)))
 
-/* Uncomment this block if using RGB
-&led_strip {
-    chain-length = <6>;
-    // chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
-    // chain-length = <25>; // Uncomment if using only per-key LEDs.
-};
- */
+// Uncomment this block if using RGB
+// &led_strip {
+//     chain-length = <6>;
+//     // chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
+//     // chain-length = <25>; // Uncomment if using only per-key LEDs.
+// };
 
 / {
     behaviors {
@@ -66,8 +65,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-            = <&macro_tap &bt BT_SEL 0>
-            , <&macro_tap &tog 0>
+            = <&macro_tap &to 0>
+            , <&macro_tap &bt BT_SEL 0>
             ;
         };
 
@@ -76,8 +75,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-            = <&macro_tap &bt BT_SEL 3>
-            , <&macro_tap &tog 1>
+            = <&macro_tap &to 1>
+            , <&macro_tap &bt BT_SEL 3>
             ;
         };
     };
